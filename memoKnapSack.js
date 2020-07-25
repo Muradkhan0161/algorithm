@@ -35,14 +35,16 @@ function knapsackFn(items, cap, itemIndex, memo) {
   }
 
   memo[cap][itemIndex] = resultSack;
-  console.log(memo[cap][itemIndex]);
+  // console.log(memo[cap][itemIndex]);
 
   return resultSack;
 }
 
 function knapsack(items, cap, index) {
-  const mem = Array.from(Array(cap + 1), () =>
-    Array(items.length).fill(undefined)
+  const mem = Array(cap+1).fill(Array(items.length).fill(undefined)
+  
+  // Array.from(Array(cap + 1), () =>
+  //   Array(items.length).fill(undefined)
   );
   return knapsackFn(items, cap, index, mem);
 }
