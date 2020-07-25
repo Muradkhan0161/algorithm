@@ -1,7 +1,7 @@
 function knapsackFn(items, cap, itemIndex, memo) {
   console.log('Running'); //eta run howar kotha silona jdi memo use kri
   if (memo[cap][itemIndex]) { //ei condition ta bad dile recursion ta besi run howar kotha
-    console.log('memo');
+    console.log(memo[cap][itemIndex]);
     return memo[cap][itemIndex];
   }
   if (cap === 0 || itemIndex < 0) {
@@ -55,7 +55,7 @@ const items = [
   { name: 'c', value: 10, weight: 3 },
   { name: 'd', value: 2, weight: 2 },
 ];
-const maxCap = 8;
+const maxCap = 20;
 
 const sack = knapsack(items, maxCap, items.length - 1);
 console.log(sack);
