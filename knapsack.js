@@ -1,5 +1,5 @@
 function knapsack (items, cap, itemIndex) {
-    if (itemIndex < 0) {
+    if (cap===0 || itemIndex < 0) {
         return {
             items: [], value: 0, weight: 0
         };
@@ -20,7 +20,7 @@ function knapsack (items, cap, itemIndex) {
     const valueWithItem = sackWithItem.value + items[itemIndex].value;
     const valueWithoutItem = sackWithoutItem.value;
 
-    if (valueWithItem > valueWithoutItem) {
+    if (valueWithItem > valueWithoutItem) {0
         const updatedSack = {
             items: sackWithItem.items.concat(items[itemIndex]),
             value: sackWithItem.value + items[itemIndex].value,
