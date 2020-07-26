@@ -1,4 +1,5 @@
 function knapsack (items, cap, itemIndex) {
+    console.log('Running');
     if (cap===0 || itemIndex < 0) {
         return {
             items: [], value: 0, weight: 0
@@ -33,10 +34,7 @@ function knapsack (items, cap, itemIndex) {
     else {
         return sackWithoutItem;
     }
-
-
 }
-
 
 const items = [
     {name: 'a', value: 3, weight: 3 },
