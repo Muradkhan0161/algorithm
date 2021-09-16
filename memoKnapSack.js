@@ -1,7 +1,7 @@
 function knapsackFn(items, cap, itemIndex, memo) {
   console.log('Running'); //eta run howar kotha silona jdi memo use kri
   if (memo[cap][itemIndex]) { //ei condition ta bad dile recursion ta besi run howar kotha
-    console.log(memo[cap][itemIndex]);
+    // console.log(memo[cap][itemIndex]);
     return memo[cap][itemIndex];
   }
   if (cap === 0 || itemIndex < 0) {
